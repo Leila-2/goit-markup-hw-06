@@ -36,11 +36,6 @@ p {
   margin: 0;
 }
 
-/* img {
-  display: block;
-  max-width: 100%;
-  height: auto; */
-
 body {
   font-family: var(--main-font), sans-serif;
   font-size: 16px;
@@ -54,8 +49,6 @@ body {
   text-decoration: none;
   line-height: 1.43;
   font-weight: 500;
-  /* padding-top: 32px;
-  padding-bottom: 32px; */
 
   transition-property: color;
   transition-duration: 250ms;
@@ -118,8 +111,6 @@ body {
 }
 
 .page-header {
-  /* padding-top: 30px;
-  padding-bottom: 30px; */
   border: 1px solid #ececec;
 }
 
@@ -167,7 +158,6 @@ body {
   margin-right: 93px;
   padding-top: 30px;
   padding-bottom: 30px;
-  /* display: inline-block; */
 }
 .link.logo.white {
   color: #f5f4fa;
@@ -179,7 +169,9 @@ body {
 .dark-bg {
   background-color: var(--dark-bg);
 }
+
 /* Hero section */
+
 .hero-section {
   margin-left: auto;
   margin-right: auto;
@@ -207,6 +199,7 @@ body {
   text-align: center;
   font-weight: 900;
   color: #ffffff;
+  margin-bottom: 30px;
 }
 .button {
   font-size: 16px;
@@ -221,7 +214,9 @@ body {
   cursor: pointer;
   margin-left: auto;
   margin-right: auto;
-  /* margin-bottom: 200px; */
+  width: 200px;
+  height: 50px;
+  text-align: center;
   border: none;
   border-radius: 4px;
   padding-left: 30px;
@@ -696,12 +691,13 @@ body {
 .icon-close-btn {
   width: 11px;
   height: 11px;
-  fill: currentColor;
+  fill: var(--social-icon-color);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-btn:hover .icon-close-btn,
 .modal-btn:focus .icon-close-btn {
-  color: #2196f3;
+  fill: #2196f3;
 }
 .modal-btn {
   position: absolute;
@@ -710,11 +706,9 @@ body {
 
   width: 30px;
   height: 30px;
-  color: var(--social-icon-color);
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
   background-color: #fff;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .is-hidden {
@@ -725,7 +719,7 @@ body {
 .modal-title {
   font-weight: bold;
   font-size: 20px;
-  line-height: 1.15em;
+  line-height: 1.15;
   text-align: center;
   letter-spacing: 0.03em;
 
@@ -752,10 +746,8 @@ body {
   height: 40px;
   border-radius: 4px;
 
-  color: var(--social-icon-color);
   border: 1px solid rgba(33, 33, 33, 0.2);
-  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .label {
   font-size: 12px;
@@ -770,7 +762,8 @@ body {
   bottom: 50%;
   left: 15px;
   transform: translateY(50%);
-  fill: currentColor;
+  fill: #000000;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .user.name-svg {
   width: 12px;
@@ -799,9 +792,80 @@ body {
   color: rgba(117, 117, 117, 0.5);
 }
 .modal-input:focus + .user {
-  color: var(--accent-color);
+  fill: var(--accent-color);
 }
 .modal-input:focus {
   border-color: var(--accent-color);
   outline: none;
+}
+/* Checkbox */
+.label-checkbox {
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: #757575;
+
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 30px;
+}
+.checkbox-link {
+  text-decoration-line: underline;
+  color: #2196f3;
+}
+
+.checkbox-icon {
+  width: 16px;
+  height: 15px;
+  border: 2px solid #000000;
+  border-radius: 3px;
+  margin-right: 7px;
+  justify-content: center;
+}
+
+.checkbox-input:checked + .checkbox-icon {
+  background-color: var(--accent-color);
+  background-origin: border-box;
+  background-image: url(../images/svg/checkbox.svg);
+  background-size: contain;
+  border-color: var(--accent-color);
+}
+.submit-btn {
+  display: inline-block;
+}
+.join-container {
+  margin-right: 70px;
+}
+.footer-input {
+  background-color: transparent;
+  width: 358px;
+  height: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-sizing: border-box;
+  border-radius: 4px;
+  margin-top: 20px;
+  margin-right: 12px;
+  padding-left: 16px;
+}
+.footer-input::placeholder {
+  color: rgba(117, 117, 117, 0.5);
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
+  vertical-align: middle;
+}
+.icon-send {
+  fill: #ffffff;
+}
+.footer-send-container {
+  flex-wrap: wrap-reverse;
+  display: inline-flex;
+}
+.btn-footer {
+  display: inline-flex;
+  justify-content: center;
 }

@@ -465,14 +465,12 @@
               <p class="text address">г. Киев, пр-т Леси Украинки, 26</p>
               <ul class="list">
                 <li class="footer-item">
-                  <a class="link footer-text" href="mailto:info@devstudio.com"
+                  <a class="link" href="mailto:info@devstudio.com"
                     >info@devstudio.com</a
                   >
                 </li>
                 <li class="footer-item">
-                  <a class="link footer-text" href="tel:+380961111111"
-                    >+38 096 111 11 11</a
-                  >
+                  <a class="link" href="tel:+380961111111">+38 096 111 11 11</a>
                 </li>
               </ul>
             </address>
@@ -530,9 +528,30 @@
               </li>
             </ul>
           </div>
+          <div class="footer-send-container">
+            <div>
+              <h3 class="third-title">Подпишись на рассылку</h3>
+              <label>
+                <input
+                  class="footer-input"
+                  type="text"
+                  name="footer-input"
+                  placeholder="E-mail"
+                />
+              </label>
+            </div>
+            <button type="submit" class="button">
+              Подписаться
+              <svg class="icon-send">
+                <use href="./images/svg/sprite.svg#icon-send"></use>
+              </svg>
+            </button>
+          </div>
         </div>
       </div>
     </footer>
+
+    <!-- Backdrop -->
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button class="modal-btn" data-modal-close>
@@ -540,6 +559,7 @@
             <use href="./images/svg/sprite.svg#icon-close-btn"></use>
           </svg>
         </button>
+
         <div class="modal-container">
           <h3 class="modal-title">Оставьте свои данные, мы Вам перезвоним</h3>
           <form class="form">
@@ -554,6 +574,7 @@
                 id="user-name"
                 placeholder=" "
                 autocomplete="off"
+                autofocus
               />
               <svg class="user name-svg">
                 <use href="./images/svg/sprite.svg#icon-Vector"></use>
@@ -575,16 +596,15 @@
                 <use href="./images/svg/sprite.svg#icon-phone-input"></use>
               </svg>
             </div>
-
             <label for="user-email" class="label">
               <span>Почта</span>
             </label>
             <div class="form-field">
               <input
                 type="tel"
-                name="user-"
+                name="user-email"
                 class="modal-input"
-                id="user-phone"
+                id="user-email"
                 placeholder=" "
               />
               <svg class="user email-svg">
@@ -604,7 +624,19 @@
                 id="comments"
               ></textarea>
             </div>
-            <button type="submit" class="button">Отправить</button>
+            <label class="label-checkbox">
+              <input
+                type="checkbox"
+                name="checkbox"
+                class="is-hidden checkbox-input"
+              />
+              <span class="checkbox-icon" tabindex="0"></span>
+              <span
+                >Соглашаюсь с рассылкой и принимаю
+                <a class="checkbox-link" href="#">Условия договора</a>
+              </span>
+            </label>
+            <button type="submit" class="button submit-btn">Отправить</button>
           </form>
         </div>
       </div>
