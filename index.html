@@ -543,39 +543,67 @@
         <div class="modal-container">
           <h3 class="modal-title">Оставьте свои данные, мы Вам перезвоним</h3>
           <form class="form">
-            <label class="form-field">
-              <span class="label">Имя</span>
-              <input type="text" name="user-name" class="modal-input" />
+            <label for="user-name" class="label">
+              <span>Имя</span>
+            </label>
+            <div class="form-field">
+              <input
+                type="text"
+                name="user-name"
+                class="modal-input"
+                id="user-name"
+                placeholder=" "
+                autocomplete="off"
+              />
               <svg class="user name-svg">
                 <use href="./images/svg/sprite.svg#icon-Vector"></use>
               </svg>
-            </label>
+            </div>
 
-            <label class="form-field">
-              <span class="label">Телефон</span>
-              <input type="tel" name="user-phone" class="modal-input" />
+            <label for="user-phone" class="label">
+              <span>Телефон</span>
+            </label>
+            <div class="form-field">
+              <input
+                type="tel"
+                name="user-phone"
+                class="modal-input"
+                id="user-phone"
+                placeholder=" "
+              />
               <svg class="user phone-svg">
                 <use href="./images/svg/sprite.svg#icon-phone-input"></use>
               </svg>
-            </label>
+            </div>
 
-            <label class="form-field">
-              <span class="label"> Почта </span>
-              <input type="email" name="user-email" class="modal-input" />
+            <label for="user-email" class="label">
+              <span>Почта</span>
+            </label>
+            <div class="form-field">
+              <input
+                type="tel"
+                name="user-"
+                class="modal-input"
+                id="user-phone"
+                placeholder=" "
+              />
               <svg class="user email-svg">
                 <use href="./images/svg/sprite.svg#icon-email-input"></use>
               </svg>
+            </div>
+
+            <label for="comments" class="label">
+              <span> Комментарий </span>
             </label>
 
-            <label class="form-field">
-              <span class="label"> Комментарий </span>
+            <div class="form-field">
               <textarea
                 name="comments"
                 class="modal-input comments"
                 placeholder="Введите текст"
+                id="comments"
               ></textarea>
-            </label>
-
+            </div>
             <button type="submit" class="button">Отправить</button>
           </form>
         </div>
